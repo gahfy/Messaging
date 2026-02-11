@@ -37,6 +37,7 @@ import android.text.TextUtils;
 
 import com.android.ex.photo.Intents.PhotoViewIntentBuilder;
 import com.android.messaging.R;
+import com.android.messaging.conversationlist.presentation.ConversationListActivity;
 import com.android.messaging.datamodel.ConversationImagePartsView;
 import com.android.messaging.datamodel.MediaScratchFileProvider;
 import com.android.messaging.datamodel.MessagingContentProvider;
@@ -53,7 +54,6 @@ import com.android.messaging.ui.attachmentchooser.AttachmentChooserActivity;
 import com.android.messaging.ui.conversation.ConversationActivity;
 import com.android.messaging.ui.conversation.LaunchConversationActivity;
 import com.android.messaging.ui.conversationlist.ArchivedConversationListActivity;
-import com.android.messaging.ui.conversationlist.ConversationListActivity;
 import com.android.messaging.ui.conversationlist.ForwardMessageActivity;
 import com.android.messaging.ui.conversationsettings.PeopleAndOptionsActivity;
 import com.android.messaging.ui.debug.DebugMmsConfigActivity;

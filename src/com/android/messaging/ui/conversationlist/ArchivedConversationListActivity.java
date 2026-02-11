@@ -32,7 +32,7 @@ public class ArchivedConversationListActivity extends AbstractConversationListAc
         super.onCreate(savedInstanceState);
 
         final ConversationListFragment fragment =
-                ConversationListFragment.createArchivedConversationListFragment();
+                ConversationListFragment.Companion.createArchivedConversationListFragment();
         getSupportFragmentManager().beginTransaction().add(android.R.id.content, fragment).commit();
         invalidateActionBar();
     }

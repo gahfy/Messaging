@@ -18,18 +18,16 @@ package com.android.messaging.datamodel;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import androidx.core.app.RemoteInput;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
+import com.android.messaging.conversationlist.presentation.ConversationListActivity;
 import com.android.messaging.datamodel.action.InsertNewMessageAction;
-import com.android.messaging.datamodel.action.UpdateMessageNotificationAction;
 import com.android.messaging.datamodel.data.MessageData;
 import com.android.messaging.datamodel.data.ParticipantData;
 import com.android.messaging.ui.UIIntents;
-import com.android.messaging.ui.conversationlist.ConversationListActivity;
 import com.android.messaging.util.LogUtil;
 import com.android.messaging.util.UriUtil;
 

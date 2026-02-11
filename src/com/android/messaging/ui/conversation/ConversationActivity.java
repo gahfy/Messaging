@@ -24,6 +24,7 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 
 import com.android.messaging.R;
+import com.android.messaging.conversationlist.presentation.ConversationListActivity;
 import com.android.messaging.datamodel.MessagingContentProvider;
 import com.android.messaging.datamodel.data.MessageData;
 import com.android.messaging.ui.BugleActionBarActivity;
@@ -32,7 +33,6 @@ import com.android.messaging.ui.contact.ContactPickerFragment;
 import com.android.messaging.ui.contact.ContactPickerFragment.ContactPickerFragmentHost;
 import com.android.messaging.ui.conversation.ConversationActivityUiState.ConversationActivityUiStateHost;
 import com.android.messaging.ui.conversation.ConversationFragment.ConversationFragmentHost;
-import com.android.messaging.ui.conversationlist.ConversationListActivity;
 import com.android.messaging.util.Assert;
 import com.android.messaging.util.ContentType;
 import com.android.messaging.util.LogUtil;

@@ -1000,4 +1000,8 @@
     <string name="alerts_channel">Alerts</string>
 
     <string name="mark_as_read">Mark as read</string>
+
+    <string name="error">Error</string>
+    <string name="selected">Selected</string>
+    <string name="more">More</string>
 </resources>

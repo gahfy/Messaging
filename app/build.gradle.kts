@@ -3,6 +3,7 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 java {
@@ -39,14 +40,22 @@ android {
     buildFeatures {
         buildConfig = true
         resValues = true
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15" // adapte à ta version
     }
 
     sourceSets.getByName("main") {
-        assets.srcDir("../assets")
+        assets.directories.add("../assets")
         manifest.srcFile("../AndroidManifest.xml")
-        java.srcDirs("../src")
-        kotlin.srcDirs("../src")
-        res.srcDir("../res")
+        java.directories.add("../src")
+        kotlin.directories.add("../src")
+        res.directories.add("../res")
+    }
+
+    sourceSets.getByName("debug") {
+        res.directories.add("../res-debug")
     }
 
     val keystorePropertiesFile = rootProject.file("keystore.properties")
@@ -74,6 +83,7 @@ android {
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
                     "../proguard.flags", "../proguard-release.flags")
+            signingConfig = signingConfigs.getByName("debug")
             if (useKeystoreProperties) {
                 signingConfig = signingConfigs.getByName("release")
             }
@@ -91,6 +101,10 @@ android {
 }
 
 dependencies {
+    val composeBom = platform("androidx.compose:compose-bom:2025.12.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.preference:preference:1.2.1")
     implementation("androidx.palette:palette:1.0.0")
@@ -99,8 +113,20 @@ dependencies {
     implementation("com.google.guava:guava:33.4.8-android")
     implementation("com.googlecode.libphonenumber:libphonenumber:8.13.52")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
+    implementation("com.google.code.findbugs:jsr305:3.0.2")
+
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.activity:activity-compose:1.12.4")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.material:material-icons-core:1.7.8")
+    implementation("androidx.compose.material:material-icons-extended:1.7.8")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
 
     implementation(project(":lib:platform_frameworks_opt_chips"))
     implementation(project(":lib:platform_frameworks_opt_photoviewer"))
     implementation(project(":lib:platform_frameworks_opt_vcard"))
+
+    implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+    implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0")
 }

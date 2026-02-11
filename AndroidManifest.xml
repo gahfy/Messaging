@@ -72,7 +72,7 @@
 
         <!-- Displays a list of conversations -->
         <activity
-            android:name=".ui.conversationlist.ConversationListActivity"
+            android:name=".conversationlist.presentation.ConversationListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="user"
             android:exported="true"
@@ -118,10 +118,10 @@
             android:screenOrientation="user"
             android:label="@string/archived_activity_title"
             android:theme="@style/BugleTheme.ArchivedConversationListActivity"
-            android:parentActivityName="com.android.messaging.ui.conversationlist.ConversationListActivity">
+            android:parentActivityName="com.android.messaging.conversationlist.presentation.ConversationListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android.messaging.ui.conversationlist.ConversationListActivity" />
+                android:value="com.android.messaging.conversationlist.presentation.ConversationListActivity" />
         </activity>
 
         <!-- Displays the contents of a single conversation -->
@@ -133,10 +133,10 @@
             android:resizeableActivity="true"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:theme="@style/BugleTheme.ConversationActivity"
-            android:parentActivityName="com.android.messaging.ui.conversationlist.ConversationListActivity">
+            android:parentActivityName="com.android.messaging.conversationlist.presentation.ConversationListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android.messaging.ui.conversationlist.ConversationListActivity" />
+                android:value="com.android.messaging.conversationlist.presentation.ConversationListActivity" />
         </activity>
 
         <!-- Blocked Participants -->
@@ -146,10 +146,10 @@
             android:screenOrientation="user"
             android:label="@string/blocked_contacts_title"
             android:theme="@style/BugleTheme"
-            android:parentActivityName="com.android.messaging.ui.conversationlist.ConversationListActivity">
+            android:parentActivityName="com.android.messaging.conversationlist.presentation.ConversationListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android.messaging.ui.conversationlist.ConversationListActivity" />
+                android:value="com.android.messaging.conversationlist.presentation.ConversationListActivity" />
         </activity>
 
         <!-- Full-screen photo viewer -->
@@ -168,10 +168,10 @@
             android:theme="@style/BugleTheme.SettingsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="user"
-            android:parentActivityName="com.android.messaging.ui.conversationlist.ConversationListActivity">
+            android:parentActivityName="com.android.messaging.conversationlist.presentation.ConversationListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.android.messaging.ui.conversationlist.ConversationListActivity" />
+                android:value="com.android.messaging.conversationlist.presentation.ConversationListActivity" />
         </activity>
 
         <activity

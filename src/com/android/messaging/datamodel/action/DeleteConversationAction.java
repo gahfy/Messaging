@@ -51,11 +51,11 @@ import java.util.List;
 public class DeleteConversationAction extends Action implements Parcelable {
     private static final String TAG = LogUtil.BUGLE_DATAMODEL_TAG;
 
-    static class TargetConversation implements Parcelable {
+    public static class TargetConversation implements Parcelable {
         final String mId;
         final long mCutoffTimestamp;
 
-        TargetConversation(String conversationId, long cutoffTimestamp) {
+        public TargetConversation(String conversationId, long cutoffTimestamp) {
             mId = conversationId;
             mCutoffTimestamp = cutoffTimestamp;
         }
@@ -110,7 +110,7 @@ public class DeleteConversationAction extends Action implements Parcelable {
 
     private static final String KEY_CONVERSATIONS = "conversations";
 
-    private DeleteConversationAction(final TargetConversation[] conversations) {
+    public DeleteConversationAction(final TargetConversation[] conversations) {
         super();
         actionParameters.putParcelableArray(KEY_CONVERSATIONS, conversations);
     }
